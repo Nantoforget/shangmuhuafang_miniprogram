@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="index_container">
+  <!-- 轮播图 -->
+  <swiper class="swiper_banners" indicator-dots autoplay="true" circular="true">
+    <swiper-item wx:for="{{ banner }}" wx:key="id">
+      <image class="banner-img" src="{{ item.imageUrl }}" />
+    </swiper-item>
+  </swiper>
+  <!-- 导航列表一级分类 -->
+  <view class="category1">
+    <view class="cate" wx:for="{{ category1 }}" wx:key="id">
+      <image class="{{ item.id > 5 ? 'active' : 'category-img' }}" src="{{ item.imageUrl }}" alt="{{ item.name }}" />
+      <text>{{ item.name }}</text>
+    </view>
+  </view>
+  <!-- 活动背景 -->
+  <view class="big_img">
+    <image src="https://img02.hua.com/zhuanti/valentine/2023/23_valentine_mbanner_m.png?a1" mode="widthFix" />
+  </view>
+  <!-- 猜你喜欢和人气推荐 -->
+  <view class="like_hot">
+    <!-- 猜你喜欢 -->
+    <view class="like">
+      <goods-list title="猜你喜欢" list="{{ likeList }}"></goods-list>
+    </view>
+    <view class="hot">
+      <goods-list title="人气推荐" list="{{ hotList }}"></goods-list>
+    </view>
+  </view>
+</view>

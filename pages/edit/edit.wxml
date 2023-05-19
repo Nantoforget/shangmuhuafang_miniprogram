@@ -1,0 +1,21 @@
+<view class="edit">
+  <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+    <image class="avatar" src="{{ headimgurl }}"></image>
+  </button>
+  <!-- <van-cell-group>
+    <van-field
+      type="nickname"
+      value="{{ nickName }}"
+      placeholder="请输入用户名"
+      border="{{ true }}"
+      bind:change="onChange" />
+  </van-cell-group> -->
+  <view class="nickname">
+    <label for="nickname" class="lable">昵称：</label>
+    <input type="nickname" id="nickname" model:value="{{ nickName }}" placeholder="请输入用户名" />
+  </view>
+  <view class="btns">
+    <button type="warn">忽略设置</button>
+    <button type="primary" bindtap="submitUserInfo">提交设置</button>
+  </view>
+</view>

@@ -1,0 +1,61 @@
+.goods-card{
+  width: 350rpx;
+  margin-bottom: 20rpx;
+}
+
+.goods-info{
+  background: #fff;
+}
+.goods-info .img{
+  width: 100%;
+}
+
+.goods-card .name{
+  font-weight: bold;
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  /* 单行文本溢出用三个点代替 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.goods-card .floralLanguage{
+  height: 68rpx;
+  font-size: 26rpx;
+  color: #333;
+  margin: 20rpx 0 20rpx 10rpx;
+  /* 多行文本溢出用三个点代替 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.goods-price{
+  display: flex;
+  margin-left:10rpx;
+  justify-content: space-between;
+  padding: 0 30rpx 10rpx 0;
+}
+.goods-price image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.price{
+  font-weight: bold;
+}
+.marketPrice{
+  color: #999;
+  text-decoration: line-through;
+}
+
+.goods-more{
+  width: 100%;
+  height: 60rpx;
+  background: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 50rpx;
+}

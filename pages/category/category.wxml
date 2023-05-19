@@ -1,0 +1,27 @@
+<view class="category">
+  <view class="nav">
+    <view
+      data-index="{{ index }}"
+      bindtap="changeCategory"
+      wx:for="{{ categoryTree }}"
+      wx:key="id"
+      class="nav-list {{ categoryIndex === index && 'active' }}">
+      <view class="line"></view>
+      <view class="title">{{ item.name }}</view>
+    </view>
+  </view>
+  <view class="content">
+    <view class="nav-title">{{ title }}</view>
+    <view class="list">
+      <view
+        class="list-info"
+        data-category2id="{{ item.id }}"
+        wx:for="{{ children }}"
+        wx:key="id"
+        bindtap="goGoodsList">
+        <image src="{{ item.imageUrl }}" mode="scaleToFill" />
+        <text>{{ item.name }}</text>
+      </view>
+    </view>
+  </view>
+</view>

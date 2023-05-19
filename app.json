@@ -1,0 +1,53 @@
+{
+  "entryPagePath": "pages/goods/detail/detail",
+  "pages": [
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/category/category",
+    "pages/personal/personal",
+    "pages/goods/list/list",
+    "pages/goods/detail/detail",
+    "pages/login/login",
+    "pages/edit/edit"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#9c0211",
+    "navigationBarTitleText": "慕尚花坊",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#919191",
+    "selectedColor": "#ffa690",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/static/tabBar/home-icon1.png",
+        "selectedIconPath": "/static/tabBar/home-icon1-1.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "/static/tabBar/home-icon2.png",
+        "selectedIconPath": "/static/tabBar/home-icon2-2.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "/static/tabBar/home-icon3.png",
+        "selectedIconPath": "/static/tabBar/home-icon3-3.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "/static/tabBar/home-icon4.png",
+        "selectedIconPath": "/static/tabBar/home-icon4-4.png"
+      }
+    ]
+  }
+}

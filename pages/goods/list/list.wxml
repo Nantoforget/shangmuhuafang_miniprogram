@@ -1,0 +1,17 @@
+<view>
+  <view class="goods">
+    <goods-card wx:for="{{ goodsList }}" wx:key="id" good="{{ item }}"></goods-card>
+  </view>
+  <view class="loading">
+    <van-loading size="24px" wx:if="{{ status === 'loading' }}">加载中...</van-loading>
+    <van-divider
+      wx:if="{{ status === 'noMore' }}"
+      contentPosition="center"
+      customStyle="color: #1989fa; border-color: #1989fa; font-size: 18px;">
+      没有更多了
+    </van-divider>
+  </view>
+</view>
+<van-empty description="没有商品">
+  <van-button round type="danger" bindtap="goHome" class="bottom-button">回到首页</van-button>
+</van-empty>

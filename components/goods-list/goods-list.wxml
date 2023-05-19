@@ -1,0 +1,8 @@
+<!--components/goods-list/goods-list.wxml-->
+<view class="goods-list">
+  <view class="goods-like">{{ title }}</view>
+  <view class="goods">
+    <goods-card wx:for="{{ list }}" wx:key="id" good="{{ item }}"></goods-card>
+  </view>
+  <view class="goods-more" bindtap="goGoodsList">查看更多</view>
+</view>

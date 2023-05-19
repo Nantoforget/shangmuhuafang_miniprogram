@@ -1,0 +1,57 @@
+.category{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.nav{
+  width: 180rpx;
+  height: 100%;
+  background: #eee;
+  font-size: 28rpx;
+  font-weight: bold;
+  text-align: center;
+  
+}
+.nav .nav-list{
+  box-sizing: border-box;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.nav .active{
+  background: #fff;
+  position: relative;
+}
+.active .line{
+  width: 6rpx;
+  height: 60rpx;
+  background: red;
+  position: absolute;
+  top: 10rpx;
+  left: 10rpx;
+}
+.content{
+  flex:1;
+}
+.content .nav-title{
+  font-size: 38rpx;
+  font-weight:600;
+  margin: 20rpx;
+}
+.list{
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  margin-top: 20rpx;
+}
+.content .list-info{
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.content .list-info image{
+  width: 88rpx;
+  height: 88rpx;
+}

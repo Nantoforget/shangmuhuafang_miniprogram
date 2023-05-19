@@ -1,0 +1,52 @@
+/**index.wxss**/
+.index_container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper_banners {
+  width: 100%;
+  height: 300rpx
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+}
+
+.category1 {
+  width: 100%;
+  height: 280rpx;
+  margin: 20rpx auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-between;
+}
+
+.cate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-img {
+  width: 88rpx;
+  height: 88rpx;
+  margin-bottom: 15rpx;
+}
+
+.cate .active {
+  width: 44rpx;
+  height: 44rpx;
+  margin-bottom: 15rpx;
+}
+
+.big_img image{
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.like_hot{
+  background: rgb(237,237,237);
+}

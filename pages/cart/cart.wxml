@@ -1,0 +1,72 @@
+<!-- cart 购物车 -->
+<view class="container cart_list_container">
+  <block wx:if="{{ cartList.length }}">
+    <!-- 购物车列表 -->
+    <view class="cart_list">
+      <view class="cart_item" wx:for="{{ cartList }}" wx:key="goodsId">
+        <!-- 左侧选项卡 -->
+        <view class="check">
+          <van-checkbox
+            data-id="{{ item.goodsId }}"
+            checked-color="#FA4126"
+            value="{{ item.isChecked }}"
+            bind:change="handleChangeChecked"></van-checkbox>
+        </view>
+
+        <!-- 中间商品图 -->
+        <view class="shop_img">
+          <image class="img" src="{{ item.imageUrl }}"></image>
+        </view>
+
+        <!-- 右侧商品信息 -->
+        <view class="shop_info">
+          <view class="title">{{ item.name }}</view>
+          <view class="buy">
+            <view class="price">￥ {{ item.price }}</view>
+            <view class="buy_btn">
+              <van-icon
+                data-name="{{ item.name }}"
+                data-id="{{ item.goodsId }}"
+                bindtap="deleteGood"
+                size="18px"
+                color="#71797f"
+                name="delete"
+                class="del" />
+              <van-stepper
+                value="{{ item.count }}"
+                data-goodsid="{{ item.goodsId }}"
+                data-oldcount="{{ item.count }}"
+                bind:change="updataCartGoodCount" />
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 底部结算 -->
+    <view class="submit_footer">
+      <view class="check">
+        <van-checkbox bind:change="changeAllIsChecked" checked-color="#FA4126" value="{{ allIschecked }}">
+          全选
+        </van-checkbox>
+      </view>
+
+      <view class="right">
+        <view class="total-wrapper">
+          <text>合计：</text>
+          <text class="total-price">¥ {{ allGoodsPrice }}</text>
+        </view>
+        <view class="total-count">
+          <van-button
+            disabled="{{ allGoodsCount == 0 }}"
+            size="small"
+            color="linear-gradient(to right, rgb(255, 96, 52), rgb(238, 10, 36))"
+            round>
+            去结算({{ allGoodsCount }})
+          </van-button>
+        </view>
+      </view>
+    </view>
+  </block>
+  <!-- 空的购物车 -->
+  <van-empty description="还没有添加商品，快去添加吧～" wx:else />
+</view>
