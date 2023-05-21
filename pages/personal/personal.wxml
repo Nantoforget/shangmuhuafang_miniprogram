@@ -37,7 +37,7 @@
       </view>
       <view class="order-content-wrap function">
         <navigator url="/pages/address/list/index?isBack=0" open-type="navigate">
-          <view class="order-content-item">
+          <view class="order-content-item" bindtap="goMyAddress">
             <view class="iconfont icon-daohangdizhi"></view>
             <text>地址管理</text>
           </view>

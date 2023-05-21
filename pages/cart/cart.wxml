@@ -60,7 +60,8 @@
             disabled="{{ allGoodsCount == 0 }}"
             size="small"
             color="linear-gradient(to right, rgb(255, 96, 52), rgb(238, 10, 36))"
-            round>
+            round
+            bind:tap="goOrderBuy">
             去结算({{ allGoodsCount }})
           </van-button>
         </view>

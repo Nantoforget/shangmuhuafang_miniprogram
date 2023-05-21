@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "商品详情",
   "usingComponents": {
     "van-action-sheet": "@vant/weapp/action-sheet/index",
     "van-stepper": "@vant/weapp/stepper/index",

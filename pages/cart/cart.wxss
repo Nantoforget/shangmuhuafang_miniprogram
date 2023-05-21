@@ -65,6 +65,7 @@
   width: 100%;
   justify-content: space-between;
   padding: 0 20rpx;
+  z-index: 99;
 }
 .submit_footer .right {
   margin: 0 20rpx;

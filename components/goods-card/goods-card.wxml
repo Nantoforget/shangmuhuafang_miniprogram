@@ -1,14 +1,16 @@
 <view class="goods-card">
   <view class="goods-info">
-    <image class="img" src="{{ good.imageUrl }}" mode="scaleToFill" />
-    <view class="name">{{ good.name }}</view>
-    <view class="floralLanguage">
-      {{ good.floralLanguage }}
+    <view bindtap="goGoodDetail" data-goodsid="{{ good.id }}">
+      <image class="img" src="{{ good.imageUrl }}" mode="scaleToFill" />
+      <view class="name">{{ good.name }}</view>
+      <view class="floralLanguage">
+        {{ good.floralLanguage }}
+      </view>
     </view>
     <view class="goods-price">
       <view class="price">￥{{ good.price }}</view>
       <view class="marketPrice">￥{{ good.marketPrice }}</view>
-      <image src="https://img02.hua.com/m/home/img/home_buy_btn.png" mode="widthFix" />
+      <image bindtap="addGoodsCart" src="https://img02.hua.com/m/home/img/home_buy_btn.png" mode="widthFix" />
     </view>
   </view>
 </view>

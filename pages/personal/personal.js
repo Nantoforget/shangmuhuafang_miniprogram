@@ -24,6 +24,25 @@ Page({
       url: "/pages/edit/edit",
     });
   },
+
+  /**
+   * 我的地址
+   */
+  goMyAddress() {
+    wx.navigateTo({
+      url: "/pages/address/list/list",
+    });
+  },
+
+  /**
+   * 我的订单
+   */
+  gotoOrderList() {
+    wx.navigateTo({
+      url: "/pages/order/list/list",
+    });
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

@@ -127,3 +127,137 @@ export const checkAllCartApi = (isChecked) => {
     url: `/mall-api/cart/checkAllCart/${isChecked}`,
   });
 };
+
+/**
+ * 获取商品详情
+ */
+export const getGoodDetailApi = (goodsId) => {
+  return request({
+    url: `/mall-api/goods/${goodsId}`,
+  });
+};
+
+/**
+ *立即下单
+ */
+export const getBuyNowOrderApi = (params) => {
+  return request({
+    url: `/mall-api/order/buy/${params.goodsId}`,
+    data: params,
+  });
+};
+/**
+ * 购物车去结算确认下单
+ */
+export const getCartGoodsOrderApi = () => {
+  return request({
+    url: "/mall-api/order/trade",
+  });
+};
+
+/* --------------------------地址相关------------------------------- */
+/**
+ * 获取我的地址
+ * @returns
+ */
+export const getUserAddressApi = () => {
+  return request({
+    url: "/mall-api/userAddress/findUserAddress",
+  });
+};
+/**
+ *获取订单地址
+ */
+export const getOrderAddressApi = () => {
+  return request({
+    url: "/mall-api/userAddress/getOrderAddress",
+  });
+};
+/**
+ * 删除地址
+ */
+export const deleteUserAddressApi = (id) => {
+  return request({
+    url: `/mall-api/userAddress/delete/${id}`,
+  });
+};
+/**
+ * 添加地址
+ */
+export const saveUserAddressApi = (params) => {
+  return request({
+    url: "/mall-api/userAddress/save",
+    method: "POST",
+    data: params,
+  });
+};
+/**
+ * 选择地址
+ */
+export const chooseUserAddressApi = (id) => {
+  return request({
+    url: `/mall-api/userAddress/selectAddress/${id}`,
+  });
+};
+/**
+ * 修改地址
+ */
+export const updateUserAddressApi = (params) => {
+  return request({
+    url: "/mall-api/userAddress/update",
+    method: "POST",
+    data: params,
+  });
+};
+/**
+ *获取地址详情
+ */
+export const getAddressDetailApi = (id) => {
+  return request({
+    url: `/mall-api/userAddress/${id}`,
+  });
+};
+
+/**
+ * 提交订单
+ */
+export const UserSubmitOrderApi = (data) => {
+  return request({
+    url: "/mall-api/order/submitOrder",
+    method: "POST",
+    data,
+  });
+};
+/**
+ * 获取订单详情
+ */
+export const getOrderDetailByOrderNoApi = (orderNo) => {
+  return request({
+    url: `/mall-api/order/order/${orderNo}`,
+  });
+};
+/**
+ * 获取订单分页列表
+ */
+export const getOrderByPageLimitApi = (page, limit) => {
+  return request({
+    url: `/mall-api/order/order/${page}/${limit}`,
+  });
+};
+
+/**
+ * 微信下单支付
+ */
+export const getPayments = (orderNo) => {
+  return request({
+    url: `/mall-api/webChat/createJsapi/${orderNo}`,
+  });
+};
+/**
+ * 微信订单查询
+ */
+export const queryStatusorderApi = (orderNo) => {
+  return request({
+    url: `/mall-api/webChat/queryPayStatus/${orderNo}`,
+  });
+};

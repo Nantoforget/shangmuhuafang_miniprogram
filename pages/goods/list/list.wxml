@@ -12,6 +12,6 @@
     </van-divider>
   </view>
 </view>
-<van-empty description="没有商品">
+<van-empty description="没有商品" wx:if="{{ goodsList.length === 0 }}">
   <van-button round type="danger" bindtap="goHome" class="bottom-button">回到首页</van-button>
 </van-empty>

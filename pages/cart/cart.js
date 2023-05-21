@@ -169,6 +169,15 @@ Page({
       }, 0),
     });
   },
+
+  /**
+   * 购物车确认下单
+   */
+  goOrderBuy() {
+    wx.navigateTo({
+      url: "/pages/order/detail/detail",
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
