@@ -6,7 +6,7 @@
     <navigator
       wx:if="{{ !userDefaultAddress.id }}"
       class="nav"
-      url="/pages/address/list/list"
+      url="/addressListPackage/pages/address/list/list"
       hover-class="navigator-hover"
       open-type="navigate">
       <van-icon size="22px" name="add" />
@@ -16,7 +16,7 @@
     <navigator
       wx:else
       class="nav nav_address"
-      url="/pages/address/list/list"
+      url="/addressListPackage/pages/address/list/list"
       hover-class="navigator-hover"
       open-type="navigate">
       <view class="address_content">

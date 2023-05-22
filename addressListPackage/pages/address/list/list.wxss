@@ -27,7 +27,7 @@
 }
 .list-warpper {
   background-color: #fff;
-  padding: 0 12px;
+  padding: 0 12px 80rpx 12px;
 }
 
 .list-item::after {

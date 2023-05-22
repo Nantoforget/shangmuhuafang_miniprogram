@@ -30,7 +30,7 @@ Page({
    */
   goMyAddress() {
     wx.navigateTo({
-      url: "/pages/address/list/list",
+      url: "/addressListPackage/pages/address/list/list",
     });
   },
 

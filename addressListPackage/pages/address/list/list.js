@@ -1,5 +1,5 @@
 // pages/address/list/list.js
-import { getUserAddressApi, deleteUserAddressApi, chooseUserAddressApi } from "../../../utils/api";
+import { getUserAddressApi, deleteUserAddressApi, chooseUserAddressApi } from "../../../../utils/api";
 Page({
   /**
    * 页面的初始数据

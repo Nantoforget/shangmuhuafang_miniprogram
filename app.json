@@ -12,7 +12,6 @@
     "pages/order/detail/detail",
     "pages/address/add/add",
     "pages/order/result/result",
-    "pages/address/list/list",
     "pages/order/list/list"
   ],
   "window": {
@@ -54,5 +53,11 @@
         "selectedIconPath": "/static/tabBar/home-icon4-4.png"
       }
     ]
-  }
+  },
+  "subPackages": [
+    {
+      "root": "addressListPackage",
+      "pages": ["pages/address/list/list"]
+    }
+  ]
 }
